@@ -16,8 +16,9 @@ from tensorboardX import SummaryWriter
 from torch.utils.data import Dataset
 import numpy as np
 from dcgan_model import Generator, Discriminator
+from models import ResNet18, AlexNet_half, AlexNet_half_wo_BN
 #from alexnet import AlexNet
-import tensorflow as tf
+#import tensorflow as tf
 import torchvision
 
 import pandas as pd

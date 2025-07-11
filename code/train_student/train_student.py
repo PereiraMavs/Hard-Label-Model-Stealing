@@ -16,6 +16,7 @@ from torch.utils.data import Dataset
 from PIL import Image
 from dcgan_model import Generator, Discriminator
 from auto_augment import AutoAugment
+from models import AlexNet, ResNet18, AlexNet_half_wo_BN
 
 import pickle
 import sys

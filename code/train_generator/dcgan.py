@@ -18,7 +18,7 @@ from tensorboardX import SummaryWriter
 import numpy as np
 from dcgan_model import Generator, Discriminator, Discriminator_SNGAN
 #from alexnet import AlexNet
-import tensorflow as tf
+#import tensorflow as tf
 import torchvision
 import pandas as pd
 
@@ -232,7 +232,7 @@ if __name__ == '__main__':
             'epoch': 200,
         }
     
-    state = torch.load(opt.teacher_path)
+    #state = torch.load(opt.teacher_path)
     print(state['acc'])
     netC.load_state_dict(state['net'])
     netC.eval()
@@ -292,7 +292,7 @@ if __name__ == '__main__':
                 continue
             data_size = data_size + batch_size
             label = torch.full((batch_size,), real_label, device=device)
-            label = label.type(torch.cuda.FloatTensor)
+            label = label.type(torch.FloatTensor)
             output = netD(real_cpu)
             
             errD_real = criterion(output, label)

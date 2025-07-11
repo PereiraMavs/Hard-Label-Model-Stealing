@@ -16,8 +16,9 @@ import torch.nn.functional as F
 from tensorboardX import SummaryWriter
 import numpy as np
 from dcgan_model import Generator, Discriminator
+from models import ResNet18, AlexNet_half, AlexNet_half_wo_BN
 #from alexnet import AlexNet
-import tensorflow as tf
+#import tensorflow as tf
 import torchvision
 from torch.utils.data import Dataset
 from auto_augment import AutoAugment
